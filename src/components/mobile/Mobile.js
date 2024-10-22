@@ -26,7 +26,7 @@ export default function Mobile() {
     e.preventDefault();
     dispatch(saveUser(inputs));
     // console.log(inputs);
-    navigate(router.pathname + '/address');
+    navigate('/address');
     // console.log(window.location.href)
   };
 
