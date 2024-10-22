@@ -2,13 +2,11 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { saveUser } from '../redux/reducers/user';
+import { saveUser } from '../../redux/reducers/user';
 
-export default function Address() {
-  const firstName = useRef(null);
-  const lastName = useRef(null);
-  const email = useRef(null);
-  const address = useRef(null);
+export default function Doc() {
+  const pan = useRef(null);
+  const addhar = useRef(null);
   const [inputs, setInputs] = useState({});
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -28,62 +26,49 @@ export default function Address() {
   const handelSubmit = (e) => {
     e.preventDefault();
     dispatch(saveUser(inputs));
-    navigate('/doc');
+    navigate('/bank');
+    // console.log(inputs);
+  };
+
+  // Handle image upload
+  const handleImageInput = (event) => {
+    const { name, files } = event.target;
+    setInputs((values) => ({ ...values, [name]: URL.createObjectURL(files[0]) }));
   };
   return (
     <>
-      <h1>Enter your name and address</h1>
-      <Link to="/">back</Link>
+      <p>Enter PAN AND ADDHAR DETAILS</p>
+      <Link to="/address">back</Link>
       <form onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
         <br />
         <input
           onChange={handleChange}
           required
-          value={inputs.firstName || ''}
-          name="firstName"
+          value={inputs.pan || ''}
+          name="pan"
           autoComplete="true"
-          id="first-name"
-          ref={firstName}
+          id="pan"
+          ref={pan}
           className="m-1 p-1"
           type="text"
-          placeholder="First Name"
+          placeholder="PAN NUMBER"
         />
+        <input onChange={handleImageInput} type="file" id="pan-image" name="panImage" accept="image/png" />
+        <br />
         <input
           onChange={handleChange}
           required
-          value={inputs.email || ''}
-          name="email"
+          value={inputs.addhar || ''}
+          name="addhar"
           autoComplete="true"
-          id="email"
-          ref={email}
-          className="m-1 p-1"
-          type="email"
-          placeholder="Email"
-        />
-        <input
-          onChange={handleChange}
-          required
-          value={inputs.lastName || ''}
-          name="lastName"
-          autoComplete="true"
-          id="last-name"
-          ref={lastName}
+          id="addhar"
+          ref={addhar}
           className="m-1 p-1"
           type="text"
-          placeholder="Last Name"
+          placeholder="ADDHAR"
         />
-        <input
-          onChange={handleChange}
-          required
-          value={inputs.address || ''}
-          name="address"
-          autoComplete="true"
-          id="laddress"
-          ref={address}
-          className="m-1 p-1"
-          type="text"
-          placeholder="Addresse"
-        />
+        <input onChange={handleImageInput} type="file" id="addhar-image" name="addharImage" accept="image/png" />
+        <br />
         <input className="btn btn-primary" id="submit" type="submit" />
       </form>
     </>

@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { saveUser } from '../redux/reducers/user';
+import { saveUser } from '../../redux/reducers/user';
 
 export default function Doc() {
   const bankAC = useRef(null);

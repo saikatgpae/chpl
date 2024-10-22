@@ -3,7 +3,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { saveUser } from '../redux/reducers/user';
+import { saveUser } from '../../redux/reducers/user';
+import './mobile.css';
 
 export default function Mobile() {
   const phone = useRef(null);
@@ -47,11 +48,14 @@ export default function Mobile() {
 
   return (
     <>
-      <h1>Enter Mobile number</h1>
-      <button className="btn text-primary text-decoration-underline" type="button" onClick={cleareAsyncStore}>clear Async store</button>
-      <br />
-      <button className="btn text-primary text-decoration-underline" type="button" onClick={clearLocalStorage}>clear Local Storage</button>
-      <form onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
+      <div className="head p-4">
+        <h1>Enter Mobile to sign up</h1>
+        <div>
+          <button className="btn text-primary text-decoration-underline" type="button" onClick={cleareAsyncStore}>clear Async store</button>
+          <button className="btn text-primary text-decoration-underline" type="button" onClick={clearLocalStorage}>clear Local Storage</button>
+        </div>
+      </div>
+      <form className="mobile-form p-4" onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
         <br />
         <input pattern="^\d{10}$" onChange={handleChange} required value={inputs.phone || ''} name="phone" autoComplete="true" id="mobile" ref={phone} className="m-1 p-1" type="phone" placeholder="9000000000" />
         <input className="btn btn-primary" id="submit" type="submit" />

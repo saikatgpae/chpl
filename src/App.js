@@ -1,11 +1,11 @@
-// import logo from './logo.svg';
+/* eslint-disable */
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Mobile from './components/Mobile';
-import Address from './components/Address';
-import Doc from './components/Doc';
-import Bank from './components/Bank';
-import Terms from './components/Terms';
+import Mobile from './components/mobile/Mobile';
+import Address from './components/address/Address';
+import Doc from './components/doc/Doc';
+import Bank from './components/bank/Bank';
+import Terms from './components/terms/Terms';
 
 function App() {
   return (

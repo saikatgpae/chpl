@@ -1,8 +1,9 @@
 /* eslint-disable */
 import React, { useState, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { saveUser } from '../redux/reducers/user';
+import { saveUser } from '../../redux/reducers/user';
+// import { saveUser } from '../redux/reducers/user';
 
 export default function Terms() {
   const [inputs, setInputs] = useState({});
