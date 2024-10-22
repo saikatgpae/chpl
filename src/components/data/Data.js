@@ -18,7 +18,7 @@ export default function Data() {
       </div>
       <ul className="data-form p-4">
         { Object.keys(profile).map((item, i) => (
-          <li key={item}>{item.toUpperCase()}:&nbsp;<span className="text-primary">{profile[item].toString()}</span></li>
+          <li key={item} className="text-secondary">{item.toUpperCase()}:&nbsp;<span className="text-info">{profile[item].toString()}</span></li>
         ))}
       </ul>
     </>
