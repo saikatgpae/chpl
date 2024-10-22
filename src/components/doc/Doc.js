@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { saveUser } from '../../redux/reducers/user';
+import './doc.css';
 
 export default function Doc() {
   const pan = useRef(null);
@@ -37,10 +38,11 @@ export default function Doc() {
   };
   return (
     <>
-      <p>Enter PAN AND ADDHAR DETAILS</p>
-      <Link to="/address">back</Link>
-      <form onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
-        <br />
+      <div className="doc-head p-4">
+        <h3>Enter PAN AND ADDHAR DETAILS</h3>
+        <Link to="/address">back</Link>
+      </div>
+      <form className="doc-form p-4" onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
         <input
           onChange={handleChange}
           required
@@ -69,7 +71,7 @@ export default function Doc() {
         />
         <input onChange={handleImageInput} type="file" id="addhar-image" name="addharImage" accept="image/png" />
         <br />
-        <input className="btn btn-primary" id="submit" type="submit" />
+        <input className="btn btn-primary m-2" id="submit" type="submit" />
       </form>
     </>
   );

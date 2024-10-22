@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { saveUser } from '../../redux/reducers/user';
+import './address.css';
 
 export default function Address() {
   const firstName = useRef(null);
@@ -32,10 +33,11 @@ export default function Address() {
   };
   return (
     <>
-      <h1>Enter your name and address</h1>
-      <Link to="/">back</Link>
-      <form onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
-        <br />
+      <div className="address-head p-4">
+        <h1>Enter your name and address</h1>
+        <Link to="/">back</Link>
+      </div>
+      <form className="address-form" onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
         <input
           onChange={handleChange}
           required
@@ -84,7 +86,7 @@ export default function Address() {
           type="text"
           placeholder="Addresse"
         />
-        <input className="btn btn-primary" id="submit" type="submit" />
+        <input className="btn btn-primary m-2" id="submit" type="submit" />
       </form>
     </>
   );
