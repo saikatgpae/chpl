@@ -26,7 +26,8 @@ export default function Mobile() {
     e.preventDefault();
     dispatch(saveUser(inputs));
     // console.log(inputs);
-    navigate('/address');
+    navigate(router.pathname + '/address');
+    // console.log(window.location.href)
   };
 
   const cleareAsyncStore = async () => {
