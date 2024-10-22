@@ -25,7 +25,7 @@ export default function Terms() {
     if (terms.current.checked) {
       dispatch(saveUser(inputs));
       localStorage.setItem('inputs', JSON.stringify(profile));
-      navigate('/');
+      navigate('/data');
     }
   };
 
