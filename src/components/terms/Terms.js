@@ -1,9 +1,9 @@
 /* eslint-disable */
 import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveUser } from '../../redux/reducers/user';
-// import { saveUser } from '../redux/reducers/user';
+import './terms.css';
 
 export default function Terms() {
   const [inputs, setInputs] = useState({});
@@ -31,15 +31,17 @@ export default function Terms() {
 
   return (
     <>
-      <p>Terms & condition</p>
-      <form onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
-        {/* <input type="checkbox" id="terms" name="t&c" value="" /> */}
+      <div className="terms-head p-4">
+        <h3 className="">Terms & condition</h3>
+        <Link to="/bank">back</Link>
+      </div>
+      <form className="terms-form p-4" onSubmit={handelSubmit} id="mobileNumber" action="" method="POST" name="signupForm">
+        Aggreed?
         <input
           onChange={handleChange}
           required
           value={inputs.termsCondition || ''}
           name="termsCondition"
-        // autoComplete="true"
           id="terms-condition"
           ref={terms}
           className="m-1 p-1"
