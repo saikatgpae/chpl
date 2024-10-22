@@ -13,8 +13,9 @@ export default function Data() {
   return (
     <>
       <div className="data-head p-4">
-        <h3>All your DATA</h3>
         <Link to="/">Home</Link>
+        <h3>All your DATA</h3>
+        <Link to="/nike">Nike page</Link>
       </div>
       <ul className="data-form p-4">
         { Object.keys(profile).map((item, i) => (

@@ -7,6 +7,7 @@ import Doc from './components/doc/Doc';
 import Bank from './components/bank/Bank';
 import Terms from './components/terms/Terms';
 import Data from './components/data/Data';
+import Nike from './components/nike/Nike';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/bank" element={<Bank />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/data" element={<Data />} />
+        <Route path="/nike" element={<Nike />} />
       </Routes>
     </BrowserRouter>
 

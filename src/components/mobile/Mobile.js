@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { saveUser } from '../../redux/reducers/user';
 import './mobile.css';
 
@@ -50,7 +50,9 @@ export default function Mobile() {
   return (
     <>
       <div className="head p-4">
+        <Link to="/nike">Nike page</Link>
         <h1>Enter Mobile to sign up</h1>
+       
         <div>
           <button className="btn text-primary text-decoration-underline" type="button" onClick={cleareAsyncStore}>clear Async store</button>
           <button className="btn text-primary text-decoration-underline" type="button" onClick={clearLocalStorage}>clear Local Storage</button>
