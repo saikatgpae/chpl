@@ -22,6 +22,14 @@
   color: white;
 }
 
+.menu-head-div {
+  display: flex;
+}
+
+.bag-div {
+  display: flex;
+}
+
 .nike-head {
   background-color: #181820;
   display: flex;
@@ -131,7 +139,15 @@
 
 .shoe-mini {
   width: 15vw;
-  margin-top: -200px;
+  margin-top: -100px;
+  rotate: 45deg;
+  background-color: orange;
+
+  /* background: linear-gradient(135deg, rgba(186, 39, 55, 1) 0%, rgba(186, 39, 55, 1) 51%, rgba(239, 197, 202, 1) 51%, rgba(239, 197, 202, 1) 100%); */
+
+  /* background: linear-gradient(135deg, rgba(186, 39, 55, 1) 0%, rgba(186, 39, 55, 1) 51%, rgba(239, 197, 202, 1) 51%, rgba(239, 197, 202, 1) 100%); */
+
+
 
 
   /* display: flex; */
@@ -147,7 +163,63 @@
   /* padding-left: 8vh; */
 }
 
+@media screen and (max-width: 768px) {
+  .nike-head {
+    /* display: none; */
+    display: block;
+  }
 
-/* @media screen and (max-width: 768px) {
+  .product {
+    display: flex;
+    flex-direction: column-reverse;
 
-} */
+    /* flex-flow: row-reverse; */
+  }
+
+  .shoe-image-div {
+    rotate: 0deg;
+  }
+
+  .shoe1 {
+    /* width: 100%; */
+    margin-top: -70px;
+  }
+
+  .shoe-mini-all {
+    display: flex;
+
+    /* margin-top: -100px; */
+    justify-content: center;
+
+    /* position: absolute; */
+  }
+
+  .shoe-mini {
+    width: 25vw;
+    margin-top: -90px;
+    rotate: 0deg;
+    background-color: transparent;
+  }
+
+  .color-div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .size-div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu-head-div {
+    display: block;
+  }
+
+  #searchInput {
+    display: none;
+  }
+
+  .bag-div {
+    display: none;
+  }
+}
