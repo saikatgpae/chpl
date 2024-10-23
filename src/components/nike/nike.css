@@ -1,0 +1,263 @@
+#searchInput {
+  background-image: url('../../images/searchlogo.png');
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 5px 5px 10px 5px;
+  padding-left: 50px;
+  height: 2rem;
+  background-color: #3e3e41;
+  border: none;
+  background-size: 20px;
+}
+
+.menuul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 2.5vw;
+  padding-right: 2.5vw;
+}
+
+#searchInput::placeholder {
+  color: white;
+}
+
+.menu-head-div {
+  display: flex;
+}
+
+.bag-div {
+  display: flex;
+}
+
+.nike-head {
+  background-color: #181820;
+  display: flex;
+  justify-content: space-between;
+  padding: 3vw;
+}
+
+.product {
+  background-color: #181820;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-image: url('../../images/nikeLogoBig.svg');
+
+  /* transform: rotate(90deg); */
+
+  /* background-position: -5vw 5vw; */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+}
+
+.product::before {
+  /* background-image: url('../../images/nikeLogoBig.svg'); */
+
+  /* transform: 30deg; */
+
+  /* background-repeat: no-repeat; */
+
+  /* background-position: bottom; */
+
+  /* background-size: 100vw; */
+}
+
+.product-info {
+  color: white;
+}
+
+.color {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.size {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+  /* display: inline-block; */
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.shoe-image-div {
+  rotate: -45deg;
+
+  /* display: flex; */
+
+  /* flex-direction: column; */
+
+  /* border-radius: 50%; */
+
+  /* position: fixed; */
+
+  /* top: 10px; */
+
+  /* right: 20vw; */
+  background: none;
+  overflow: hidden;
+
+  /* position: absolute; */
+}
+
+.shoe-big {
+  display: flex;
+  justify-content: end;
+}
+
+.shoe1 {
+  width: 100%;
+
+  /* margin-right: 200px; */
+  margin-top: -170px;
+
+  /* position: absolute; */
+
+  /* position: fixed; */
+
+  /* top: 10; */
+
+  /* position: relative; */
+
+  /* rotate: -45deg; */
+}
+
+.shoe-mini-all {
+  display: flex;
+
+  /* margin-top: -100px; */
+  justify-content: end;
+
+  /* position: absolute; */
+}
+
+.shoe-mini {
+  width: 15vw;
+  margin-top: -100px;
+  rotate: 45deg;
+
+  /* background-color: rgb(32, 26, 17); */
+
+  /* background: linear-gradient(135deg, rgb(219, 189, 195) 0%, rgb(54, 60, 47) 51%, rgb(141, 64, 73) 51%, rgb(201, 191, 108) 100%); */
+
+  /* background: linear-gradient(135deg, rgba(186, 39, 55, 1) 0%, rgba(186, 39, 55, 1) 51%, rgba(239, 197, 202, 1) 51%, rgba(239, 197, 202, 1) 100%); */
+
+  /* display: flex; */
+
+  /* position: absolute; */
+
+  /* justify-content: end; */
+
+  /* position: fixed; */
+
+  /* top: 65vh; */
+
+  /* padding-left: 8vh; */
+}
+
+.nikeLogo,
+.bagLogo,
+.menuLogo {
+  /* width: 2em; */
+  height: 2em;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .nike-head {
+    /* display: none; */
+
+    /* display: block; */
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column-reverse;
+
+    /* flex-flow: row-reverse; */
+  }
+
+  .shoe-image-div {
+    rotate: 0deg;
+  }
+
+  .shoe1 {
+    /* width: 100%; */
+    margin-top: -70px;
+  }
+
+  .shoe-mini-all {
+    display: flex;
+
+    /* margin-top: -100px; */
+    justify-content: center;
+
+    /* position: absolute; */
+  }
+
+  .shoe-mini {
+    width: 25vw;
+    margin-top: -90px;
+    rotate: 0deg;
+    background-color: transparent;
+  }
+
+  .color-div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .size-div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu-head-div {
+    /* display: block; */
+  }
+
+  .menuul {
+    display: none;
+  }
+
+  .bag-div {
+    /* display: none; */
+    align-items: center;
+  }
+
+  .nikeLogo {
+    align-self: center;
+  }
+
+  .nikeLogo,
+  .bagLogo,
+  .menuLogo {
+    /* width: 2em; */
+    height: 1em;
+    width: auto;
+  }
+
+  #searchInput {
+    background-image: url('../../images/searchlogo.png');
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+
+    /* font-size: 10px; */
+    padding: 5px 5px 10px 5px;
+    padding-left: 50px;
+    height: 2rem;
+    background-color: #3e3e41;
+    border: none;
+    background-size: 20px;
+
+    /* width: 100%; */
+  }
+}
