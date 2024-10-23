@@ -37,7 +37,10 @@ export default function Nike() {
       </div>
       <div className="product" style={{ height: '100vh' }}>
         <div className="product-info p-4">
-          <p style={{ font: 'bold 20vw' }}>Nike Impact 4</p>
+          <p style={{ fontWeight: '900', fontSize: '2rem' }}>
+            Nike Impact&nbsp;
+            <span style={{ color: '#ED3B6B' }}>4</span>
+          </p>
           <p>$250.90</p>
           <div>
             <p>colors</p>
@@ -60,8 +63,10 @@ export default function Nike() {
           </div>
         </div>
         <div className="shoe-image-div" style={{ backgroundColor: 'transperent' }}>
-          <img src={shoe1} alt="shoe" className="shoe1" />
-          <div className="d-flex shoe-mini-all" style={{ }}>
+          <div className="shoe-big">
+            <img src={shoe1} alt="shoe" className="shoe1" />
+          </div>
+          <div className="shoe-mini-all" style={{ }}>
             <img src={shoe11} alt="nike logo" className="shoe-mini" style={{ }} />
             <img src={shoe12} alt="nike logo" className="shoe-mini" style={{ }} />
             <img src={shoe13} alt="nike logo" className="shoe-mini" style={{ }} />

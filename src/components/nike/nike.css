@@ -31,13 +31,27 @@
 .product {
   background-color: #181820;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   background-image: url('../../images/nikeLogoBig.svg');
+
+  /* transform: rotate(90deg); */
 
   /* background-position: -5vw 5vw; */
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100vw;
+}
+
+.product::before {
+  /* background-image: url('../../images/nikeLogoBig.svg'); */
+
+  /* transform: 30deg; */
+
+  /* background-repeat: no-repeat; */
+
+  /* background-position: bottom; */
+
+  /* background-size: 100vw; */
 }
 
 .product-info {
@@ -65,7 +79,11 @@
 }
 
 .shoe-image-div {
-  /* rotate: -45deg; */
+  rotate: -45deg;
+
+  /* display: flex; */
+
+  /* flex-direction: column; */
 
   /* border-radius: 50%; */
 
@@ -80,8 +98,16 @@
   /* position: absolute; */
 }
 
+.shoe-big {
+  display: flex;
+  justify-content: end;
+}
+
 .shoe1 {
   width: 100%;
+
+  /* margin-right: 200px; */
+  margin-top: -170px;
 
   /* position: absolute; */
 
@@ -95,11 +121,18 @@
 }
 
 .shoe-mini-all {
+  display: flex;
+
+  /* margin-top: -100px; */
+  justify-content: end;
+
   /* position: absolute; */
 }
 
 .shoe-mini {
-  width: 10vw;
+  width: 15vw;
+  margin-top: -200px;
+
 
   /* display: flex; */
 
