@@ -15,13 +15,13 @@ body {
   .head {
     flex-direction: column;
     align-items: center;
-    /* background-color: wheat; */
+    background-color: wheat;
   }
 
   .mobile-form {
     flex-direction: column;
     align-items: center;
-    /* background-color: wheat; */
+    background-color: wheat;
     height: 100vh;
   }
 }
