@@ -17,10 +17,10 @@ export default function Nike() {
       <div className="p-4">
         <Link to="/">Signup Stepper App</Link>
       </div>
-      <div className="nike-head p-4">
-        <img src={nikeLogo} alt="nike logo" className="nike-logo" style={{ height: '2rem', width: 'auto' }} />
+      <div className="nike-head">
+        <img src={nikeLogo} alt="nike logo" className="nikeLogo" />
         <div className="menu-head-div">
-          <ul className="text-white d-flex menu m-0">
+          <ul className="text-white menuul m-0">
             <li>Home</li>
             <li>Offers</li>
             <li>Collection</li>
@@ -30,8 +30,8 @@ export default function Nike() {
             <input className="m-1" type="text" id="searchInput" placeholder="Search" />
           </div>
           <div className="bag-div" style={{ gap: '2.5vw' }}>
-            <img src={bag} alt="bag logo" style={{ height: '2rem', width: 'auto' }} />
-            <img src={menu} alt="menu logo" style={{ height: '2rem', width: 'auto' }} />
+            <img src={bag} alt="bag logo" className="bagLogo" />
+            <img src={menu} alt="menu logo" className="menuLogo" />
           </div>
         </div>
       </div>
