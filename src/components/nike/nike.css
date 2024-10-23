@@ -1,26 +1,37 @@
-.terms-head {
+.nike-head {
+  background-color: #181820;
   display: flex;
   justify-content: space-between;
 }
 
-.terms-form {
-  display: flex;
-
-  /* justify-content: space-around; */
+.menu {
+  list-style-type: none;
+  align-items: center;
+  gap: 2.5vw;
+  padding-right: 2.5vw;
 }
 
-@media screen and (max-width: 768px) {
-  .terms-head {
-    flex-direction: column;
-    align-items: center;
-    background-color: wheat;
-  }
-
-  .terms-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: wheat;
-    height: 100vh;
-  }
+.shoe {
+  background-color: #181820;
 }
+
+#searchInput {
+  background-image: url('../../images/searchlogo.png');
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 5px 5px 10px 5px;
+  padding-left: 50px;
+  height: 2rem;
+  background-color: #3e3e41;
+  border: none;
+  background-size: 20px;
+}
+
+#searchInput::placeholder {
+  color: white;
+}
+
+/* @media screen and (max-width: 768px) {
+
+} */
