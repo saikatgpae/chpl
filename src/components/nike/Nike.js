@@ -14,7 +14,7 @@ import './nike.css';
 export default function Nike() {
   return (
     <div style={{ }}>
-      <div className="p-4">
+      <div className="p-4" style={{ backgroundColor: '#181820' }}>
         <Link to="/">Signup Stepper App</Link>
       </div>
       <div className="nike-head">
